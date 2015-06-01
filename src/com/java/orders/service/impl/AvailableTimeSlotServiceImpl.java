@@ -9,7 +9,7 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -26,8 +26,7 @@ public class AvailableTimeSlotServiceImpl implements AvailableTimeSlotService {
 			.getName());
 	@Autowired
 	AvailableTimeSlotsDao availabletimeslotdao;
-	@Value("${timeslots}")
-	private String[] alltimeslots;
+	
 
 	@Transactional(propagation = Propagation.REQUIRED, readOnly = true)
 	public List<TimeSlotDto> getAvailableTimeSlots(String orderdate,
