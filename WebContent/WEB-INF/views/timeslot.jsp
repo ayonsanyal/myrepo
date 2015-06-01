@@ -136,10 +136,10 @@ function booking()
 	});
 	function showconfirmation(data) 
 	{
-
+               var msg = JSON.parse(data);
 		var confirmation = "Congrats,,  booking is done for" + data.BookingId
-				+ "for the timeslot" + data.TimeSlot + "for the date"
-				+ data.orderdate + "";
+				+ "for the timeslot" + msg.TimeSlot + "for the date"
+				+ msg.orderdate + "";
 		$("#confirmationpopup").html(confirmation);
 		$("#confirmationpopup").dialog("open");
 	}	
