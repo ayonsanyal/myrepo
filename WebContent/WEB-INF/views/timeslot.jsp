@@ -86,7 +86,7 @@ function booking()
 
 	function prepareOrderBookingURL(timeslot) {
 
-		var bookingdetails = $.ajax({
+		       $.ajax({
 /* Assuming that the parameters for the below url are present in the request */
 			type : "POST",
 
