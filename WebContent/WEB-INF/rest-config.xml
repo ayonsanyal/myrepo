@@ -12,7 +12,7 @@
 
 
 	<context:property-placeholder location="classpath:resources/databasedetails.properties" order="1" ignore-unresolvable="true"/>
-	<context:property-placeholder location ="classpath:resources/timeslot.properties" order="2" ignore-unresolvable="true"/>
+	
 
 	<context:component-scan base-package="com.java.orders" />
 
