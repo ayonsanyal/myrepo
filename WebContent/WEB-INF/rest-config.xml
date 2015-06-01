@@ -50,7 +50,7 @@
 		<beans:property name="dataSource" ref="dataSource" />
 		<beans:property name="annotatedClasses">
 			<beans:list>
-				<beans:value>com.java.orders.model.Orders</beans:value>
+				<beans:value>com.java.orders.model.TimeSlots</beans:value>
 				<beans:value>com.java.orders.model.Items</beans:value>
 				<beans:value>com.java.orders.model.BookingDetails</beans:value>
 			</beans:list>
