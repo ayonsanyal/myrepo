@@ -40,7 +40,7 @@
 
 					type : "GET",
 
-					url : "/TimeSlot/loadtimeslots/orders",
+					url : "/TimeSlot/loadtimeslots/showtimeslots",
 					contentType : "application/json; charset=utf-8",
 					accept:"application/json; charset=utf-8",
 					mimeType:"application/json",
