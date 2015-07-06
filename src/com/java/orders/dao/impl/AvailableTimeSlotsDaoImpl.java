@@ -39,7 +39,7 @@ public class AvailableTimeSlotsDaoImpl implements AvailableTimeSlotsDao {
 		List<TimeSlots> timeslots = null;
 		Criteria criteria = sessionFactory.getCurrentSession().createCriteria(
 				TimeSlots.class);
-		criteria.add(Restrictions.gt("TimeSlotStart", todaystimeinhours));
+		criteria.add(Restrictions.ge("timeSlotStart", Integer.parseInt(todaystimeinhours)));
 		timeslots = criteria.list();
 		log.debug("The method getBookedOrders is returning "+timeslots.toString());
 		return timeslots;

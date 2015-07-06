@@ -17,8 +17,7 @@
 	<context:component-scan base-package="com.java.orders" />
 
 
-	<!-- <util:properties id="timeslots"
-		location="classpath:resources/timeslot.properties" /> -->
+	
 
 	<tx:annotation-driven transaction-manager="hibernateTransactionManager" />
 
@@ -40,8 +39,8 @@
 		id="dataSource">
 		<beans:property name="driverClassName" value="${database.driver}" />
 		<beans:property name="url" value="${database.url}" />
-		<beans:property name="username" value="tinka" />
-		<beans:property name="password" value="tinka" />
+		<beans:property name="username" value="ayon" />
+		<beans:property name="password" value="ayon" />
 	</beans:bean>
 
 	<beans:bean
@@ -53,13 +52,18 @@
 				<beans:value>com.java.orders.model.TimeSlots</beans:value>
 				<beans:value>com.java.orders.model.Items</beans:value>
 				<beans:value>com.java.orders.model.BookingDetails</beans:value>
+				<beans:value>com.java.orders.model.VanDetails</beans:value>
+				<beans:value>com.java.orders.model.ItemDetail</beans:value>
+				<beans:value>com.java.orders.model.Cartons</beans:value>
+				<beans:value>com.java.orders.model.ItemsOngoing</beans:value>
 			</beans:list>
 		</beans:property>
 		<beans:property name="hibernateProperties">
 			<beans:props>
-				<beans:prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</beans:prop>
+				<beans:prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</beans:prop>
 				<beans:prop key="hibernate.show_sql">${hibernate.show_sql}</beans:prop>
 				<beans:prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}  </beans:prop>
+				<beans:prop key="hibernate.jdbc.batch_size">80</beans:prop>
 			</beans:props>
 		</beans:property>
 	</beans:bean>

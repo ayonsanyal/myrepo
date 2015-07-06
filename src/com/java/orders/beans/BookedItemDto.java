@@ -4,9 +4,10 @@ public class BookedItemDto {
 
 	private String BookingId;
 	private String OrderName;
-	
+
 	private String TimeSlot;
 	private String orderdate;
+	private String TimeStamp;
 
 	public String getBookingId() {
 		return BookingId;
@@ -15,12 +16,6 @@ public class BookedItemDto {
 	public void setBookingId(String bookingId) {
 		BookingId = bookingId;
 	}
-
-	
-
-	
-
-	
 
 	public String getTimeSlot() {
 		return TimeSlot;
@@ -44,6 +39,14 @@ public class BookedItemDto {
 
 	public void setOrderName(String orderName) {
 		OrderName = orderName;
+	}
+
+	public String getTimeStamp() {
+		return TimeStamp;
+	}
+
+	public void setTimeStamp(String timeStamp) {
+		TimeStamp = timeStamp;
 	}
 
 }

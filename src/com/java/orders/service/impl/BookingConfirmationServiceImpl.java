@@ -9,7 +9,9 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 
+
 import com.java.orders.beans.BookingItemsDTO;
+import com.java.orders.beans.ItemsDto;
 import com.java.orders.dao.BookingConfirmationDao;
 import com.java.orders.model.BookingDetails;
 import com.java.orders.service.BookingConfirmationService;
@@ -30,7 +32,13 @@ public class BookingConfirmationServiceImpl implements
 
 	}
 	@Transactional(propagation = Propagation.REQUIRED, readOnly = true)
-	public List<BookingDetails> getListOfBookedItems() {
-		return bookingconfirmationdao.getListOfBookedItems();
+	public List<BookingDetails> getListOfBookedItems(BookingItemsDTO bookingorderitems) {
+		return bookingconfirmationdao.getListOfBookedItems(bookingorderitems);
 	}
+	@Transactional(propagation = Propagation.REQUIRED, readOnly = true)
+	public List<ItemsDto> getListofItems(BookingItemsDTO bookingdetails)
+	{
+		return bookingconfirmationdao.getListOfItems(bookingdetails);
+	}
+	
 }

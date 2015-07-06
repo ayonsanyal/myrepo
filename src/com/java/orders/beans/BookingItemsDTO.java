@@ -8,7 +8,7 @@ public class BookingItemsDTO {
 	private String timeslot;
 	private List<ItemsDto> items;
 	private String orderdate;
-
+    private String timestamp;
 	public String getTimeslot() {
 		return timeslot;
 	}
@@ -43,6 +43,14 @@ public class BookingItemsDTO {
 
 	public void setOrdername(String ordername) {
 		this.ordername = ordername;
+	}
+
+	public String getTimestamp() {
+		return timestamp;
+	}
+
+	public void setTimestamp(String timestamp) {
+		this.timestamp = timestamp;
 	}
 
 }

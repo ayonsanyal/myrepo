@@ -5,6 +5,7 @@ public class ItemsDto {
 	private String name;
 	private String quantity;
 	private String price;
+	private String code;
 	public String getName() {
 		return name;
 	}
@@ -22,6 +23,12 @@ public class ItemsDto {
 	}
 	public void setPrice(String price) {
 		this.price = price;
+	}
+	public String getCode() {
+		return code;
+	}
+	public void setCode(String code) {
+		this.code = code;
 	}
 
 }
